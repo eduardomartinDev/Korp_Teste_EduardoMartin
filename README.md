@@ -1,635 +1,478 @@
-📝 Sistema NF - Gestão de Notas Fiscais
+# 📊 Sistema NF - Gestão Completa de Notas Fiscais# 📊 Sistema NF - Gestão Completa de Notas Fiscais
 
 
 
-<div align="center">> Sistema completo para gerenciamento de produtos e emissão de notas fiscais com controle de estoque em tempo real.
+<div align="center"><div align="center">
 
 
 
-![Angular](https://img.shields.io/badge/Angular-19.2-red?style=for-the-badge&logo=angular)![Status](https://img.shields.io/badge/status-produção-success)
+**Sistema empresarial com arquitetura de microsserviços para gestão de produtos, estoque e notas fiscais****Sistema empresarial com arquitetura de microsserviços para gestão de produtos, estoque e notas fiscais**
 
-![Go](https://img.shields.io/badge/Go-1.24-00ADD8?style=for-the-badge&logo=go)![Angular](https://img.shields.io/badge/Angular-19.2-red)
 
-![MariaDB](https://img.shields.io/badge/MariaDB-11.5-003545?style=for-the-badge&logo=mariadb)![Go](https://img.shields.io/badge/Go-1.23-blue)
 
-![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript)![MariaDB](https://img.shields.io/badge/MariaDB-11.5-orange)
+![Status](https://img.shields.io/badge/status-produção-success?style=for-the-badge)![Status](https://img.shields.io/badge/status-produção-success?style=for-the-badge)
 
+![Angular](https://img.shields.io/badge/Angular-19.2-DD0031?style=for-the-badge&logo=angular)![Angular](https://img.shields.io/badge/Angular-19.2-DD0031?style=for-the-badge&logo=angular)
 
+![Go](https://img.shields.io/badge/Go-1.23-00ADD8?style=for-the-badge&logo=go)![Go](https://img.shields.io/badge/Go-1.23-00ADD8?style=for-the-badge&logo=go)
 
-**Sistema empresarial com arquitetura de microsserviços para gestão de produtos, estoque e notas fiscais**---
+![MariaDB](https://img.shields.io/badge/MariaDB-11.5-003545?style=for-the-badge&logo=mariadb)![MariaDB](https://img.shields.io/badge/MariaDB-11.5-003545?style=for-the-badge&logo=mariadb)
 
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript)![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript)
 
-</div>Sistema empresarial desenvolvido com **microserviços** para gerenciar produtos, controlar estoque e emitir notas fiscais. Utiliza arquitetura moderna com backend em Go, frontend em Angular e banco de dados MariaDB.
 
 
+</div></div>
 
----### ✨ Funcionalidades Principais
 
 
+---## 🎯 Visão Geral
 
-## 🎯 Visão Geral- ✅ **Gestão de Produtos**: Cadastro, edição, exclusão e listagem de produtos com imagens
 
-- ✅ **Controle de Estoque**: Atualização automática de saldo ao emitir notas fiscais
 
-Sistema completo para gerenciamento de notas fiscais com:- ✅ **Notas Fiscais**: Criação, edição e impressão de notas com múltiplos itens
+## 🎯 Visão GeralSistema completo desenvolvido com **arquitetura de microsserviços** para gerenciar produtos, controlar estoque em tempo real e emitir notas fiscais. Utiliza tecnologias modernas com backend em Go, frontend em Angular e banco de dados MariaDB.
 
-- ✅ Cadastro de produtos com imagens- ✅ **Concorrência**: Sistema de locks para prevenir conflitos em operações simultâneas
 
-- ✅ Controle automático de estoque- ✅ **Circuit Breaker**: Proteção contra falhas em cascata entre microserviços
 
-- ✅ Emissão de notas fiscais- ✅ **Cache Inteligente**: Redução de requisições HTTP com RxJS shareReplay
+Sistema completo desenvolvido com **arquitetura de microsserviços** para gerenciar produtos, controlar estoque em tempo real e emitir notas fiscais. Utiliza tecnologias modernas com backend em Go, frontend em Angular e banco de dados MariaDB.---
 
-- ✅ Assistente IA (Hugging Face)- ✅ **Retry Automático**: Tentativas com backoff exponencial em falhas temporárias
 
-- ✅ Resiliência com Circuit Breaker- ✅ **Hot Reload**: Desenvolvimento ágil com Air (Go) e Angular CLI
 
+---## ✨ Funcionalidades Principais
 
 
-------
 
+## ✨ Funcionalidades Principais### 📦 Gestão de Produtos
 
+- ✅ **Cadastro completo**: Criar, editar, visualizar e remover produtos
 
-## 🏗️ Arquitetura## 🏗️ Arquitetura
+### 📦 Gestão de Produtos- ✅ **Upload de imagens**: Suporte a Base64 com validação (máx. 2MB)
 
+- ✅ **Cadastro completo**: Criar, editar, visualizar e remover produtos- ✅ **Busca inteligente**: Filtro em tempo real com debounce
 
+- ✅ **Upload de imagens**: Suporte a Base64 com validação (máx. 2MB)- ✅ **Visualização flexível**: Cards ou tabela conforme preferência
 
-``````
+- ✅ **Busca inteligente**: Filtro em tempo real com debounce
 
-┌─────────────────────────────────────────────────┐┌─────────────────────────────────────────────────────────────┐
+- ✅ **Visualização flexível**: Cards ou tabela conforme preferência### 📋 Notas Fiscais
 
-│          FRONTEND - Angular 19.2                ││                      FRONTEND (Angular)                      │
+- ✅ **Emissão completa**: Criar notas com múltiplos itens
 
-│     http://localhost:4200                       ││  - Componentes Standalone                                    │
+### 📋 Notas Fiscais- ✅ **Status dinâmico**: ABERTA (editável) / FECHADA (finalizada)
 
-│  • Material Design  • RxJS  • Standalone        ││  - RxJS para reatividade                                     │
+- ✅ **Emissão completa**: Criar notas com múltiplos itens- ✅ **Atualização automática**: Estoque atualizado em tempo real
 
-└──────────────┬──────────────────────────────────┘│  - Angular Material Design                                   │
+- ✅ **Status dinâmico**: ABERTA (editável) / FECHADA (finalizada)- ✅ **Formato profissional**: Visualização para impressão
 
-               │ HTTP REST│  - NGX-Toastr, Date-fns, NGX-Mask                          │
+- ✅ **Atualização automática**: Estoque atualizado em tempo real
 
-       ┌───────┴────────┐└────────────────────┬────────────────────────────────────────┘
+- ✅ **Formato profissional**: Visualização para impressão### 🛡️ Sistema Resiliente
 
-       ▼                ▼                     │ HTTP REST API
+- ✅ **Circuit Breaker**: Proteção contra falhas em cascata
 
-┌──────────────┐  ┌──────────────┐                     ├───────────────────┬─────────────────────┐
+### 🛡️ Sistema Resiliente- ✅ **Retry automático**: Tentativas com backoff exponencial
 
-│   ESTOQUE    │  │ FATURAMENTO  │                     ▼                   ▼                     ▼
+- ✅ **Circuit Breaker**: Proteção contra falhas em cascata- ✅ **Controle de concorrência**: SELECT FOR UPDATE para transações seguras
 
-│  Porta 3001  │◄─┤  Porta 3002  │┌────────────────────────────┐ ┌────────────────────────────┐
+- ✅ **Retry automático**: Tentativas com backoff exponencial- ✅ **Cache inteligente**: Redução de 66% nas requisições HTTP
 
-│              │  │              ││ SERVIÇO DE ESTOQUE (Go)    │ │ SERVIÇO FATURAMENTO (Go)  │
+- ✅ **Controle de concorrência**: SELECT FOR UPDATE para transações seguras
 
-│ • Produtos   │  │ • Notas      ││ Porta: 3001                 │ │ Porta: 3002                │
+- ✅ **Cache inteligente**: Redução de 66% nas requisições HTTP### 🤖 Assistente IA
 
-│ • Saldo      │  │ • Itens      ││ - CRUD de Produtos          │ │ - CRUD de Notas Fiscais   │
+- ✅ **Chat inteligente**: Integração com Hugging Face
 
-│              │  │ • IA Chat    ││ - Controle de Saldo         │ │ - Circuit Breaker         │
+### 🤖 Assistente IA- ✅ **Análise de dados**: Insights sobre vendas e estoque
 
-└──────┬───────┘  └──────┬───────┘│ - SELECT FOR UPDATE         │ │ - Integração com Estoque  │
+- ✅ **Chat inteligente**: Integração com Hugging Face- ✅ **Processamento natural**: Compreensão de linguagem natural
 
-       │                 ││ - Retry com Backoff         │ │ - Validações Robustas     │
+- ✅ **Análise de dados**: Insights sobre vendas e estoque
 
-       └────────┬────────┘└──────────┬─────────────────┘ └──────────┬────────────────┘
+- ✅ **Processamento natural**: Compreensão de linguagem natural---
 
-                ▼           │                               │
 
-       ┌─────────────────┐           └───────────────┬───────────────┘
 
-       │     MariaDB     │                           ▼
+---## 🏗️ Arquitetura do Sistema
 
-       │ notafiscal_desafio              ┌──────────────────────────┐
+┌─────────────────────────────────────────────────────────────┐
 
-       └─────────────────┘              │    MariaDB 11.5          │
+## 🏗️ Arquitetura do Sistema│ FRONTEND (Angular) │
 
-```              │ notafiscal_desafio       │
+│ - Componentes Standalone │
 
-              │ - Tabela: produtos       │
+```│ - RxJS para reatividade │
 
----              │ - Tabela: notasfiscais   │
+┌─────────────────────────────────────────────────────────────┐│ - Angular Material Design │
 
-              │ - Tabela: itens          │
+│                    FRONTEND (Angular)                        ││ - NGX-Toastr, Date-fns, NGX-Mask │
 
-## ✨ Funcionalidades              └──────────────────────────┘
+│         - Componentes Standalone                            │└────────────────────┬────────────────────────────────────────┘
+
+│         - RxJS para reatividade                             ││ HTTP REST API
+
+│         - Angular Material Design                           │┌───────────────┼───────────────┐
+
+│         - NGX-Toastr, Date-fns, NGX-Mask                   │▼ ▼ ▼
+
+└────────────────────┬────────────────────────────────────────┘┌────────────────┐ ┌────────────────┐ ┌────────────────┐
+
+                     │ HTTP REST API│SERVIÇO ESTOQUE│ │SER. FATURAMENTO│ │ ASSISTENTE │
+
+     ┌───────────────┼───────────────┐│ Porta: 3001 │ │ Porta: 3002 │ │ IA │
+
+     ▼               ▼               ▼│ - CRUD Produtos│ │ - Notas Fiscais│ │ - Hugging Face │
+
+┌────────────────┐ ┌────────────────┐ ┌────────────────┐│ - Controle Saldo│ │ - Circuit Br. │ │ - Analytics │
+
+│SERVIÇO ESTOQUE │ │SER. FATURAMENTO│ │  ASSISTENTE    ││ - SELECT UPDATE │ │ - Validações │ │ - Chat │
+
+│  Porta: 3001   │ │  Porta: 3002   │ │      IA        │└────────┬───────┘ └───────┬────────┘ └────────────────┘
+
+│ - CRUD Produtos│ │ - Notas Fiscais│ │ - Hugging Face ││ │
+
+│ - Controle Saldo│ │ - Circuit Br. │ │ - Analytics    │└────────┬─────────┘
+
+│ - SELECT UPDATE │ │ - Validações   │ │ - Chat         │▼
+
+└────────┬───────┘ └───────┬────────┘ └────────────────┘┌──────────────────┐
+
+         │                 ││ MariaDB 11.5 │
+
+         └────────┬─────────┘│ notafiscal_desafio│
+
+                  ▼│ - produtos │
+
+         ┌──────────────────┐│ - notasfiscais │
+
+         │   MariaDB 11.5   ││ - itens │
+
+         │notafiscal_desafio│└──────────────────┘
+
+         │   - produtos     │
+
+         │   - notasfiscais │text
+
+         │   - itens        │
+
+         └──────────────────┘### 🔧 Stack Tecnológica
 
 ```
 
-### 📦 Gestão de Produtos
+**Frontend:**
 
-- Criar, editar e remover produtos### 🎨 Stack Tecnológico
+### 🔧 Stack Tecnológica- Angular 19.2 (Standalone Components)
 
-- Upload de imagens (Base64)
+- TypeScript 5.7 + RxJS 7.8
 
-- Busca em tempo real (debounce)**Frontend:**
+| Camada | Tecnologias |- Angular Material 19.2
 
-- Visualização em cards ou tabela- Angular 19.2 (Standalone Components)
+|--------|-------------|- NGX-Toastr, Date-fns, NGX-Mask
 
-- TypeScript 5.7
+| **Frontend** | Angular 19.2 (Standalone), TypeScript 5.7, RxJS 7.8, Angular Material 19.2, NGX-Toastr, Date-fns, NGX-Mask |
 
-### 📋 Notas Fiscais- Angular Material 19.2
+| **Backend** | Go 1.23, Gin Framework, Zap Logger, Viper, Air (hot reload) |**Backend:**
 
-- Criar notas com múltiplos itens- RxJS 7.8 (Operadores: shareReplay, retryWhen, debounceTime)
-
-- Status: ABERTA (editável) / FECHADA (finalizada)- NGX-Toastr (notificações elegantes)
-
-- Atualização automática de estoque- Date-fns (formatação de datas)
-
-- Visualização em formato de impressão- NGX-Mask (máscaras de input)
-
-
-
-### 🤖 Assistente IA**Backend:**
-
-- Chat inteligente (Hugging Face)- Go 1.23
-
-- Análise de dados de vendas- Gin Framework (rotas HTTP)
-
-- Insights sobre estoque- MySQL Driver
+| **Banco de Dados** | MariaDB 11.5.2, InnoDB Engine, Transações ACID |- Go 1.23 + Gin Framework
 
 - Zap Logger (logs estruturados)
 
-### 🛡️ Resiliência- Viper (gerenciamento de configs)
+---- Viper (configurações)
 
-- **Circuit Breaker**: Proteção contra falhas- Air (hot reload)
+- Air (hot reload)
 
-- **Retry**: 3 tentativas com backoff (1s, 2s, 3s)
+## 🚀 Início Rápido
 
-- **Concorrência**: SELECT FOR UPDATE**Banco de Dados:**
+**Banco de Dados:**
 
-- MariaDB 11.5.2
+### Pré-requisitos- MariaDB 11.5.2
 
----- InnoDB Engine
+- Node.js 20+ e npm- InnoDB Engine
 
-- Transações ACID
-
-## 🚀 Início Rápido- Foreign Keys
-
-
-
-### Pré-requisitos**Ferramentas:**
-
-- Node.js 20+- Git (controle de versão)
-
-- Go 1.24+- VS Code (IDE)
-
-- MariaDB 11.5+- Postman/Thunder Client (testes API)
-
-
-
-### Instalação---
-
-
-
-```bash## 📦 Estrutura do Projeto
-
-# 1. Clone e acesse o projeto
-
-git clone <repo-url>```
-
-cd Korp_Teste_EduardoMartinPROJETO KORP/
-
-│
-
-# 2. Configure o banco├── frontend/                    # Aplicação Angular
-
-mysql -u root -p < database.sql│   ├── src/
-
-│   │   ├── app/
-
-# 3. Inicie backend - Estoque│   │   │   ├── components/     # Componentes standalone
-
-cd backend/estoque│   │   │   │   ├── home/
-
-go run main.go│   │   │   │   ├── produtos/
-
-│   │   │   │   │   ├── produto-form/
-
-# 4. Inicie backend - Faturamento (novo terminal)│   │   │   │   │   └── produto-list/
-
-cd backend/faturamento│   │   │   │   └── notas/
-
-go run main.go│   │   │   │       ├── nota-form/
-
-│   │   │   │       ├── nota-list/
-
-# 5. Inicie frontend (novo terminal)│   │   │   │       └── nota-print-dialog/
-
-cd frontend│   │   │   ├── models/         # Interfaces TypeScript
-
-npm install│   │   │   ├── services/       # Serviços HTTP
-
-npm start│   │   │   ├── app.config.ts   # Configuração da aplicação
-
-```│   │   │   └── app.routes.ts   # Rotas
-
-│   │   └── styles.scss         # Estilos globais
-
-**Acesse:** http://localhost:4200│   ├── angular.json
-
-│   ├── package.json
-
----│   └── tsconfig.json
-
-│
-
-## 📁 Estrutura├── servico-estoque-go/          # Microserviço de Estoque
-
-│   ├── main.go                  # Código principal
-
-```│   ├── config.yaml              # Configurações
-
-├── frontend/                 # Angular 19.2│   ├── .air.toml                # Config hot reload
-
-│   ├── src/app/│   ├── go.mod
-
-│   │   ├── components/      # Produtos, Notas, Chat IA│   ├── go.sum
-
-│   │   ├── services/        # HTTP Services│   └── logs/                    # Logs estruturados
-
-│   │   └── models/          # Interfaces TypeScript│
-
-│   └── package.json├── servico-faturamento-go/      # Microserviço de Faturamento
-
-││   ├── main.go                  # Código principal
-
-├── backend/│   ├── config.yaml              # Configurações
-
-│   ├── estoque/             # Microserviço Estoque (Go)│   ├── .air.toml                # Config hot reload
-
-│   │   └── main.go│   ├── go.mod
-
-│   └── faturamento/         # Microserviço Faturamento (Go)│   ├── go.sum
-
-│       └── main.go│   └── logs/                    # Logs estruturados
-
-││
-
-└── database.sql             # Schema do banco├── database.sql                 # Script de criação do banco
-
-```├── README.md                    # Este arquivo
-
-├── COMO-INICIAR.md             # Guia de instalação e execução
-
----└── DETALHAMENTO-TECNICO.md     # Documentação técnica detalhada
-
-```
-
-## 🔧 Stack Tecnológica
-
----
-
-### Frontend
-
-| Tecnologia | Versão | Uso |## 🚀 Início Rápido
-
-|-----------|--------|-----|
-
-| Angular | 19.2 | Framework SPA |### Pré-requisitos
-
-| TypeScript | 5.x | Linguagem |
-
-| Angular Material | 17.x | UI Components |- Node.js 20+ e npm
-
-| RxJS | 7.x | Programação reativa |- Go 1.23+
+- Go 1.23+- Transações ACID
 
 - MariaDB 11.5+
 
-### Backend- Git
-
-| Tecnologia | Versão | Uso |
-
-|-----------|--------|-----|### Instalação e Execução
-
-| Go | 1.24 | Linguagem |
-
-| Gin | 1.9.1 | Framework HTTP |Consulte o arquivo **[COMO-INICIAR.md](COMO-INICIAR.md)** para instruções detalhadas de instalação e execução.
-
-| MySQL Driver | 1.7.1 | Banco de dados |
-
-| UUID | 1.5.0 | IDs únicos |**Resumo:**
+- Git---
 
 
 
----```bash
-
-# 1. Clone o repositório
-
-## 📊 Padrões Implementadosgit clone <url-do-repositorio>
+### Instalação e Execução## 🚀 Início Rápido
 
 
 
-### Circuit Breaker# 2. Configure o banco de dados
+```bash### Pré-requisitos
 
-```mysql -u root -p < database.sql
+# 1. Clone o repositório- Node.js 20+ e npm
 
-CLOSED → (3 falhas) → OPEN → (10s) → HALF_OPEN → CLOSED
+git clone https://github.com/eduardomartinDev/Korp_Teste_EduardoMartin.git- Go 1.23+
 
-```# 3. Inicie o backend (Estoque)
+cd Korp_Teste_EduardoMartin- MariaDB 11.5+
 
-- Protege contra falhas em cascatacd servico-estoque-go
+- Git
 
-- Timeout de 10 segundosair  # ou: go run main.go
+# 2. Configure o banco de dados
 
-- Reset manual disponível
+mysql -u root -p < database.sql### Instalação e Execução
 
-# 4. Inicie o backend (Faturamento)
 
-### Retry com Exponential Backoffcd servico-faturamento-go
 
-```air  # ou: go run main.go
+# 3. Inicie o serviço de Estoque```bash
 
-Tentativa 1: Imediato
+cd backend/estoque# 1. Clone o repositório
 
-Tentativa 2: Aguarda 1s# 5. Inicie o frontend
+air  # ou: go run main.gogit clone <url-do-repositorio>
 
-Tentativa 3: Aguarda 2scd frontend
+cd Korp_Teste_EduardoMartin
 
-```npm install
+# 4. Em novo terminal, inicie o serviço de Faturamento
+
+cd backend/faturamento# 2. Configure o banco de dados
+
+air  # ou: go run main.gomysql -u root -p < database.sql
+
+
+
+# 5. Em novo terminal, inicie o Frontend# 3. Inicie o serviço de Estoque
+
+cd frontendcd servico-estoque-go
+
+npm installair  # ou: go run main.go
 
 npm start
 
-### Cache com RxJS```
+```# 4. Em novo terminal, inicie o serviço de Faturamento
 
-```typescript
+cd servico-faturamento-go
 
-shareReplay(1) // Reduz 66% das requisições HTTPAcesse: **http://localhost:4200**
+**Acesse:** http://localhost:4200air  # ou: go run main.go
 
-```
 
----
 
----
+---# 5. Em novo terminal, inicie o Frontend
 
-## 📚 Documentação
+cd frontend
 
-## 🧪 Testando o Sistema
+## 📁 Estrutura do Projetonpm install
 
-- **[COMO-INICIAR.md](COMO-INICIAR.md)** - Guia completo de instalação, configuração e execução
+npm start
 
-### 1. Criar Produto- **[DETALHAMENTO-TECNICO.md](DETALHAMENTO-TECNICO.md)** - Arquitetura, fluxos, padrões e implementações técnicas
+```Acesse: http://localhost:4200
 
-1. Acesse "Produtos" → "Novo Produto"
+Korp_Teste_EduardoMartin/
 
-2. Preencha: Código, Descrição, Saldo---
+│📁 Estrutura do Projeto
 
-3. Adicione imagem (opcional)
+├── frontend/                    # Aplicação Angulartext
 
-4. Salvar## 🎯 Funcionalidades Detalhadas
+│   ├── src/app/PROJETO KORP/
 
+│   │   ├── components/         # Componentes standalone│
 
+│   │   │   ├── home/├── frontend/                    # Aplicação Angular
 
-### 2. Criar Nota Fiscal### 1. Gestão de Produtos
+│   │   │   ├── produtos/│   ├── src/app/
 
-1. Acesse "Notas Fiscais" → "Nova Nota"
+│   │   │   └── notas/│   │   ├── components/         # Componentes standalone
 
-2. Selecione produtos e quantidades**Funcionalidades:**
+│   │   ├── services/           # Serviços HTTP│   │   │   ├── home/
 
-3. Adicione múltiplos itens- Criar produtos com código, descrição, saldo e imagem
+│   │   └── models/             # Interfaces TypeScript│   │   │   ├── produtos/
 
-4. Salvar- Editar produtos existentes (exceto código)
+│   └── package.json│   │   │   └── notas/
 
-- Remover produtos (se não houver notas vinculadas)
+││   │   ├── services/           # Serviços HTTP
 
-### 3. Finalizar Nota- Listar produtos com busca em tempo real (debounce 300ms)
+├── backend/│   │   └── models/             # Interfaces TypeScript
 
-1. Liste as notas- Upload de imagens (conversão para Base64)
+│   ├── estoque/                # Microsserviço de Estoque│   └── package.json
 
-2. Clique em "Finalizar" na nota ABERTA
+│   │   ├── main.go│
 
-3. Verifique: Saldo do produto diminui automaticamente**Validações:**
+│   │   ├── config.yaml├── servico-estoque-go/         # Microsserviço de Estoque
 
-- Código único (máx. 10 caracteres)
+│   │   └── .air.toml│   ├── main.go
 
-### 4. Testar IA- Descrição obrigatória (máx. 200 caracteres)
+│   ││   ├── config.yaml
 
-1. Clique no ícone de chat (canto inferior direito)- Saldo não negativo
+│   └── faturamento/            # Microsserviço de Faturamento│   └── .air.toml
 
-2. Digite: "Como funciona uma nota fiscal?"- Imagem opcional (máx. 2MB)
+│       ├── main.go│
 
-3. Ou na tela de produtos: "Analisar com IA"
+│       ├── config.yaml├── servico-faturamento-go/     # Microsserviço de Faturamento
 
-### 2. Controle de Estoque
+│       └── .air.toml│   ├── main.go
 
----
+││   ├── config.yaml
 
-**Funcionalidades:**
+├── database.sql                # Schema do banco│   └── .air.toml
 
-## 📝 Documentação Adicional- Atualização automática de saldo ao finalizar nota fiscal
+├── README.md│
 
-- Controle de concorrência com SELECT FOR UPDATE
+├── COMO-INICIAR.md             # Guia detalhado├── database.sql                # Schema do banco
 
-- **[COMO-INICIAR.md](COMO-INICIAR.md)** - Guia completo de instalação- Retry automático em caso de conflito (3 tentativas)
+└── DETALHAMENTO-TECNICO.md     # Documentação técnica├── README.md
 
-- **[DETALHAMENTO-TECNICO.md](DETALHAMENTO-TECNICO.md)** - Arquitetura e implementação- Validação de saldo disponível antes da reserva
+```├── COMO-INICIAR.md             # Guia detalhado
 
-- **[GUIA-VIDEO.md](GUIA-VIDEO.md)** - Roteiro para gravação de demo
+└── DETALHAMENTO-TECNICO.md     # Documentação técnica
 
-**Fluxo de atualização:**
+---🔒 Segurança e Boas Práticas
 
----1. Início da transação
+✅ Validação de dados em frontend e backend
 
-2. Lock pessimista (SELECT FOR UPDATE)
+## 🔒 Segurança e Boas Práticas
 
-## 🛠️ Comandos Úteis3. Validação de saldo
+✅ Transações ACID para consistência
 
-4. Atualização condicional (WHERE id = ? AND saldo = ?)
+- ✅ Validação de dados em frontend e backend
 
-```bash5. Verificação de rows affected
+- ✅ Transações ACID para consistência✅ Locks pessimistas para controle de concorrência
 
-# Frontend6. Commit ou Rollback
+- ✅ Locks pessimistas para controle de concorrência
 
-npm start              # Dev server (porta 4200)
+- ✅ CORS configurado corretamente✅ CORS configurado corretamente
 
-npm run build         # Build produção### 3. Notas Fiscais
+- ✅ Logs estruturados com Zap
 
+- ✅ Configurações externalizadas✅ Logs estruturados com Zap
 
 
-# Backend**Funcionalidades:**
 
-go run main.go        # Executar- Criar notas com múltiplos itens
+---✅ Configurações externalizadas
 
-go build              # Compilar- Editar notas em status ABERTA
 
-- Finalizar notas (muda status para FECHADA e atualiza estoque)
 
-# Banco- Remover notas (ABERTA ou FECHADA)
+## 📊 Performance📊 Performance
 
-mysql -u root -p      # Acessar MariaDB- Imprimir notas em formato profissional
+Otimizações implementadas:
 
-```- Visualizar detalhes em dialog
+**Otimizações implementadas:**
 
+🚀 Cache com shareReplay: 66% menos requisições HTTP
 
+| Recurso | Melhoria |
 
----**Estados:**
+|---------|----------|🚀 Debounce na busca: 87% menos operações de filtro
 
-- **ABERTA**: Nota em edição, pode adicionar/remover itens
+| Cache com shareReplay | 66% menos requisições HTTP |
 
-## 🐛 Troubleshooting- **FECHADA**: Nota finalizada, estoque atualizado, não editável
+| Debounce na busca | 87% menos operações de filtro |🚀 Retry automático: Maior resiliência a falhas
 
+| Retry automático | Maior resiliência a falhas |
 
+| Circuit Breaker | Proteção do sistema |🚀 Circuit Breaker: Proteção do sistema
 
-**Backend não inicia:**### 4. Recursos Avançados
 
-- Verifique se MariaDB está rodando
 
-- Confirme credenciais em `main.go`**Cache com RxJS:**
+---🧪 Testes do Sistema
 
-- `shareReplay(1)` para evitar requisições duplicadas
+Testar Concorrência
 
-**Frontend não conecta:**- Invalidação automática após mutações
+## 🧪 Testes do SistemaCrie produto com saldo 1
 
-- Verifique se backends estão nas portas 3001 e 3002- Parâmetro `forceRefresh` para bypass manual
 
-- Limpe cache do navegador
 
-**Retry com Backoff:**
+### Testar ConcorrênciaTente finalizar 2 notas simultaneamente
 
-**Circuit Breaker aberto:**- 3 tentativas automáticas
+1. Crie produto com saldo 1
 
-- POST em `http://localhost:3002/circuit-breaker/reset`- Delays crescentes: 1s → 2s → 3s
+2. Tente finalizar 2 notas simultaneamenteResultado: Uma nota sucede, outra falha por saldo insuficiente
 
-- Logs informativos de tentativas
+3. **Resultado:** Uma nota sucede, outra falha por saldo insuficiente
 
----
+Testar Circuit Breaker
 
-**Debounce na Busca:**
+### Testar Circuit BreakerDesligue serviço de estoque
 
-## 🎯 Tecnologias-Chave- Aguarda 300ms após parar de digitar
+1. Desligue serviço de estoque
 
-- `distinctUntilChanged()` para evitar buscas duplicadas
+2. Tente operações → Circuit Breaker abre após 3 falhasTente operações → Circuit Breaker abre após 3 falhas
 
-<div align="center">- Reduz operações em até 87%
+3. Ligue serviço e reset via endpoint
 
-
-
-| Frontend | Backend | Database |**Circuit Breaker:**
-
-|:--------:|:-------:|:--------:|- Proteção contra falhas no serviço de estoque
-
-| <img src="https://angular.io/assets/images/logos/angular/angular.svg" width="60"> | <img src="https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_Blue.svg" width="80"> | <img src="https://mariadb.org/wp-content/uploads/2019/11/mariadb-logo-vertical_blue.svg" width="60"> |- Estados: CLOSED → OPEN → HALF_OPEN
-
-| **Angular** | **Golang** | **MariaDB** |- Reset manual via endpoint /circuit-breaker/reset
-
-
-
-</div>---
-
-
-
----## 🔒 Segurança e Boas Práticas
-
-
-
-<div align="center">- ✅ Validação de dados no frontend e backend
-
-- ✅ Transações ACID para consistência
-
-**Desenvolvido com ☕ e 💪**- ✅ Locks pessimistas para concorrência
-
-- ✅ Retry automático com backoff exponencial
-
-*Sistema completo e pronto para produção*- ✅ Circuit breaker para resiliência
-
-- ✅ CORS configurado corretamente
-
-</div>- ✅ Logs estruturados com Zap
-
-- ✅ Configurações externalizadas com Viper
-- ✅ .gitignore para não commitar logs e binários
-
----
-
-## 📊 Performance
-
-**Melhorias implementadas:**
-- 🚀 Cache com shareReplay: **66% menos requisições HTTP**
-- 🚀 Debounce na busca: **87% menos operações de filtro**
-- 🚀 Retry automático: **Maior resiliência a falhas temporárias**
-- 🚀 Virtual Scroll (futuro): **Renderizar apenas itens visíveis**
-
----
-
-## 🧪 Testes
-
-### Testar Concorrência
-
-1. Abra 2 abas do navegador
-2. Crie um produto com saldo 1
-3. Crie 2 notas fiscais simultaneamente usando o mesmo produto
-4. Finalize ambas ao mesmo tempo
-5. **Resultado esperado**: Uma nota deve ser finalizada com sucesso, a outra deve retornar erro de saldo insuficiente
-
-### Testar Circuit Breaker
-
-1. Desligue o serviço de estoque
-2. Tente criar/finalizar uma nota fiscal
-3. Após 3 falhas, circuit breaker abre
-4. Tente novamente → resposta instantânea de erro
-5. Ligue o serviço de estoque
-6. Faça POST em `/api/notas/circuit-breaker/reset`
-7. Sistema volta ao normal
+Ligue serviço e reset via endpoint
 
 ### Testar Cache
 
-1. Abra DevTools → Network
-2. Acesse lista de produtos
-3. Observe: 1 requisição HTTP
-4. Navegue para outra página e volte
-5. Observe: sem nova requisição (cache ativo)
-6. Crie um novo produto
-7. Observe: nova requisição (cache invalidado)
+1. Acesse lista de produtos (1 requisição)Testar Cache
+
+2. Navegue e volte (0 requisições - cache ativo)Acesse lista de produtos (1 requisição)
+
+3. Crie produto (cache invalidado automaticamente)
+
+Navegue e volte (0 requisições - cache ativo)
 
 ---
+
+Crie produto (cache invalidado automaticamente)
 
 ## 🛠️ Comandos Úteis
 
-```bash
-# Frontend
-npm start              # Inicia dev server (porta 4200)
-npm run build          # Build de produção
-npm test               # Executa testes
+🛠️ Comandos Úteis
 
-# Backend (com Air - hot reload)
-air                    # Inicia com hot reload
+```bashbash
 
-# Backend (sem Air)
-go run main.go         # Executa diretamente
-go build               # Compila binário
-go test ./...          # Executa testes
+# Desenvolvimento Frontend# Desenvolvimento Frontend
 
-# Banco de Dados
-mysql -u root -p notafiscal_desafio  # Acessa banco
-SHOW TABLES;                          # Lista tabelas
-SELECT * FROM produtos;               # Lista produtos
-```
+npm start              # Servidor dev (porta 4200)npm start              # Servidor dev (porta 4200)
+
+npm run build          # Build produçãonpm run build          # Build produção
+
+
+
+# Desenvolvimento Backend# Desenvolvimento Backend
+
+air                    # Hot reloadair                    # Hot reload
+
+go run main.go         # Execução diretago run main.go         # Execução direta
+
+
+
+# Banco de Dados# Banco de Dados
+
+mysql -u root -p notafiscal_desafiomysql -u root -p notafiscal_desafio
+
+```🐛 Troubleshooting
+
+Problema comum	Solução
+
+---Frontend não conecta	Verifique serviços nas portas 3001/3002
+
+Erro de saldo insuficiente	Confirme saldo disponível no banco
+
+## 🐛 TroubleshootingCircuit Breaker aberto	POST em /circuit-breaker/reset
+
+Air não funciona	Use go run main.go como alternativa
+
+| Problema | Solução |📚 Documentação
+
+|----------|---------|
+
+| Frontend não conecta | Verifique serviços nas portas 3001/3002 |<div align="center">
+
+| Erro de saldo insuficiente | Confirme saldo disponível no banco |Desenvolvido com ☕ e 💪
+
+| Circuit Breaker aberto | POST em `/circuit-breaker/reset` |Sistema completo e pronto para produção
+
+| Air não funciona | Use `go run main.go` como alternativa |
+
+</div>
+
+---Última atualização: Novembro 2025
+
+## 📚 Documentação
+
+- 📖 [COMO-INICIAR.md](COMO-INICIAR.md) - Guia completo de instalação
+- 🔧 [DETALHAMENTO-TECNICO.md](DETALHAMENTO-TECNICO.md) - Documentação técnica detalhada
 
 ---
 
-## 🐛 Troubleshooting
+<div align="center">
 
-**Frontend não conecta ao backend:**
-- Verifique se os serviços Go estão rodando nas portas 3001 e 3002
-- Confirme CORS configurado no backend
-- Verifique console do navegador para erros
+**Desenvolvido com ☕ e 💪**
 
-**Erro de saldo insuficiente:**
-- Verifique saldo do produto no banco de dados
-- Confirme que não há notas pendentes usando o produto
+Sistema completo e pronto para produção
 
-**Circuit breaker aberto:**
-- Verifique se serviço de estoque está online
-- Faça POST em `/api/notas/circuit-breaker/reset` para resetar
+*Última atualização: Novembro 2025*
 
-**Air não funciona:**
-- Certifique-se que `$GOPATH/bin` está no PATH
-- Use `go install github.com/air-verse/air@latest`
-- Se persistir, use `go run main.go`
-
----
-
-## 📝 Licença
-
-Este projeto foi desenvolvido para fins educacionais e demonstração de conceitos de arquitetura de microserviços.
-
----
-
-**Última atualização:** Novembro 2025
+</div>
