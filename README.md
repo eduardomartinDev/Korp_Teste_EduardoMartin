@@ -87,6 +87,7 @@ Acesse: http://localhost:4200
 
 ### Estrutura do Projeto
 
+```bash
 Korp_Teste_EduardoMartin/
 ├── frontend/                    # Aplicação Angular
 │   ├── src/app/
@@ -108,6 +109,7 @@ Korp_Teste_EduardoMartin/
 │
 ├── database.sql                 # Schema do banco
 └── README.md
+```
 
 ## 🔒 Segurança e Boas Práticas
 
@@ -122,12 +124,14 @@ Korp_Teste_EduardoMartin/
 
 ## 📊 Performance
 
+```bash
 | Otimização | Resultado |
 |:-----------|:----------|
 | Cache com `shareReplay` | 🚀 **-66%** requisições HTTP |
 | Debounce na busca | 🚀 **-87%** operações de filtro |
 | Retry automático | ✅ Resiliência a falhas |
 | Circuit Breaker | ✅ Proteção do sistema |
+```
 
 ---
 
@@ -163,6 +167,7 @@ go run main.go  # Execução direta
 
 # Banco de Dados
 mysql -u root -p notafiscal_desafio
+```
 
 ## 🐛 Troubleshooting
 
